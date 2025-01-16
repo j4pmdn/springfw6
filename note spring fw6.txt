@@ -1,0 +1,52 @@
+IoC và DI trong Spring
+  Trong Spring Framework, Ioc và DI là các nguyên tắc cơ bản giúp tách rời các thành phần của ứng dụng
+ - Inversion of Control (IoC)  --> là principle
+  + IoC là 1 nguyên tắc thiết kế trong đó việc kiểm soát việc tạo và quản lý các đối tượng được
+	chuyển từ mã ứng dụng sang một container hoặc framework
+    container IoC chịu trách nhiệm khởi tạo, cấu hình và quản lý vòng đời các bean trong Spring
+ - Dependency Injection (DI)  --> là pattern
+  + DI là một mẫu thiết kế được sử dụng để triển khai IoC. Nó cho phép việc tiêm các phụ thuộc vào một lớp,
+	thay vì lớp đó tự tạo ra chúng. Điều này làm cho mã dễ bảo trì, kiểm thử và mở rộng hơn
+
+  1. Constructor Injection: Các phụ thuộc được cung cấp thông qua constructor của lớp.
+  2. Setter Injection: Các phụ thuộc được cung cấp thông qua các phương thức setter.
+  3. Field Injection: Các phụ thuộc được tiêm trực tiếp vào các trường
+                      (không được khuyến khích do khó kiểm thử và thiếu tính bất biến).
+
+
+Autowire using Spring Boot
+  Trong Spring Boot, @Autowired là 1 annotation được sử dụng để tiêm các phụ thuộc(Dependency Injection) một cách tự
+  động. Điều này có nghĩa là Spring sẽ tự động tạo và gán các đối tượng cần thiết cho các biến thành viên(Instance Variables)
+  của class mà bạn đã đánh dấu bằng @Autowired
+  @Autowired được đặt
+    + Constructor Injection
+    + Setter Injection
+    + Field Injection
+
+  @Primary, @Qualifier
+
+
+Spring Web Http methods GET and POST
+
+  REST 
+      --> HTTP METHODS
+	     -> GET    
+		    + retrieve data from the server.
+			+ Sử dụng để lấy thông tin từ server theo URI đã cung cấp.
+		 -> POST   
+		    + sends data to server for processing
+			+ Gửi thông tin tới sever thông qua các parameters HTTP.
+		 -> PUT    
+		    + replace a resource identified with a given URL.
+			+ Ghi đè tất cả thông tin của đối tượng với những gì được gửi lên.
+		 -> PATCH 
+			+ Ghi đè các thông tin được thay đổi của đối tượng.
+		 -> DELETE 
+			+ Xóa resource trên server
+		 
+
+
+
+
+
+
